@@ -1,0 +1,282 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');*/
+
+html
+{
+	font-size:62.5%;
+	font-family: 'Roboto', sans-serif;
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	margin:0;
+	padding:0;
+	font-size:1rem;
+	/*background-color: #f0f0f0;*/
+	color:#eee;
+}
+
+.container
+{
+	display:grid;
+	grid-template-columns: 20rem 1fr 1fr;
+	grid-template-areas:
+	  "mobileNav				mobileNav 			mobileNav"
+	  "leftCol 					rightCol 				rightCol"
+	  "mobileFooter   	mobileFooter  	mobileFooter";
+}
+
+.container nav.mobileNav
+{
+	display:none;
+	justify-content: center;
+	grid-area:mobileNav;
+	width:100%;
+	min-height:6rem;
+	position:fixed;
+	top:0;
+	z-index: 1000;
+	background-image: url("../img/background.gif");
+	background-size:1rem 100%;
+}
+
+.container nav.mobileNav ul
+{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-around;
+	align-self: center;
+	margin:0 auto;
+	width:75%;
+}
+
+.container nav.mobileNav ul li
+{
+	display:flex;
+	height:6rem;
+	margin:0 auto;
+}
+
+.container nav.mobileNav ul li a
+{
+	align-self: center;
+	color:#efefef;
+	text-decoration: none;
+	font-size:2rem;
+	font-weight: 700;
+	padding:0.2rem 0;
+	border-bottom: 1px solid #eee;
+}
+
+.container nav.mobileNav ul li a:hover
+{
+	color:#9999cc;
+}
+
+.container aside
+{
+	display: block;
+	grid-area:leftCol;
+	width:20rem;
+	height:100vh;
+	position:fixed;
+	background-size:1rem 100%;
+	background-image: url("../img/background.gif");
+}
+
+.container aside nav
+{
+	display:block;
+}
+
+.container aside nav.mainNav ul
+{
+	display:flex;
+	align-self: center;
+	flex-flow: row wrap;
+
+	list-style-type: none;
+	margin:2rem;
+}
+
+.container aside nav.mainNav ul li
+{
+	width:100%;
+	text-align:right;
+	font-weight: 700;
+	font-size:3rem;
+	margin:0.8rem auto;
+}
+
+.container aside nav.mainNav ul li a
+{
+	text-decoration: none;
+	border-bottom: 1px solid #eee;
+	color:#efefef;
+}
+
+.container aside nav.mainNav ul li a:hover
+{
+	color:#9999cc;
+}
+
+.container aside ul.socialIcons
+{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	list-style-type: none;
+	position:absolute;
+	bottom:1rem;
+}
+
+.container aside ul.socialIcons li
+{
+	width:6rem;
+	height:6rem;
+	margin: 1rem;
+	background-color:#33cc99;
+}
+
+.container aside ul.socialIcons li.newsletter
+{
+	width:100%;
+}
+/* rightCol page */
+.container .rightCol
+{
+	display:block;
+	grid-area:rightCol;
+}
+
+
+.container .rightCol header
+{
+	display:flex;
+	justify-content: center;
+	padding: 1rem;
+	min-height:12rem;
+	background-color:#334;
+}
+
+.container .rightCol header p
+{
+	font-size: 2.4rem;
+}
+
+/* section */
+.container .rightCol section
+{
+	display:block;
+	padding:2rem;
+	min-height:100vh;
+	background-color:#334;
+}
+
+.container .rightCol section h2
+{
+	font-size:3rem;
+	font-weight: 700;
+	margin:1rem 0;
+}
+
+.container .rightCol section .content
+{
+	min-height:25rem;
+}
+
+.container .rightCol section .content p
+{
+	font-size:2rem;
+	line-height:2.4rem;
+	margin:1rem 0;
+}
+
+
+/* footer */
+.container .rightCol footer
+{
+	display:block;
+	min-height:10rem;
+	background-color:green;
+}
+
+.container .rightCol footer p
+{
+	font-size: 1.8rem;
+	padding:1rem;
+	color:#0f0f0f;
+}
+
+.container .mobileFooter
+{
+	display: none;
+	height:6rem;
+	width:100%;
+	background-color:#33cccc;
+	position:fixed;
+	bottom:0;
+	grid-area:mobileFooter;
+	z-index: 900;
+
+	padding:0;
+}
+
+.container .mobileFooter ul.socialIcons
+{
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+
+	list-style-type: none;
+}
+
+.container .mobileFooter ul.socialIcons li
+{
+	width:6rem;
+	height:6rem;
+	background-color:#9999cc;
+}
+
+.container .mobileFooter ul.socialIcons li.newsletter
+{
+	width:18rem;
+}
+
+
+
+@media (max-width: 799px)
+{
+	.container
+	{
+		grid-template-rows: 6rem 1fr 6rem; /* 6rem = height of mobileNav + mobileFooter */
+		grid-template-areas:
+	 	"mobileNav 		mobileNav 		mobileNav"
+	 	 "rightCol 		rightCol 		rightCol"
+	 	"mobileFooter   mobileFooter  	mobileFooter"
+	}
+
+	.container nav.mobileNav
+	{
+		display:block;
+	}
+
+
+	.container aside
+	{
+		display: none;
+	}
+
+	.container .rightCol footer
+	{
+		/*display:none;*/
+	}
+
+	.container .mobileFooter
+	{
+		display: block;
+	}
+}
