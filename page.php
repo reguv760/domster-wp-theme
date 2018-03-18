@@ -1,40 +1,31 @@
 <?php get_header(); ?>
 
-				<ul class="socialIcons">
-					<li class="newsletter">
-						<p>Sign up for our Newsletter</p>
-					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+				<?php if ( dynamic_sidebar( 'social-icons' ) ); ?>
 			</aside>
 
 			<div class="rightCol">
 
 				<header>
-					<?php if ( dynamic_sidebar( 'logo-full-width' ) ); ?>
+					<div class="logo">
+						<?php if ( dynamic_sidebar( 'logo-full-width' ) ); ?>
+					</div>
 				</header>
 
 				<section>
 					<div class="content">
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	          <!-- tbs class for headers -->
-	          <div class="page-header">
-	            <!-- the_title() is WP function that shows the title of the post -->
-	            <h1><?php the_title(); ?></h1>
-	          </div>
-	          <!-- WP function that outputs post content -->
-	          <?php the_content(); ?>
+						<div class="page-content">
+	            <h2><?php the_title(); ?></h2>
+		          <!-- WP function that outputs post content -->
+		          <?php the_content(); ?>
+		         </div>
 
 	        <?php endwhile; else: ?>
 	           <!-- we run this else if there is no content -->
-	          <div class="page-header">
-	            <h1>Wups!</h1>
-	          </div>
-
-	          <p>Looks like we have no content for this page?</p>
+	          <div class="page-content">
+	            <h2>Wups!</h2>
+	         		<p>Looks like we have no content for this page?</p>
+	         	</div>
 
 	        <?php endif; ?>
 					</div>

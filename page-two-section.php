@@ -4,35 +4,32 @@
  */
 ?>
 
-<?php get_header(); ?>
+				<?php get_header(); ?>
 
-				<ul class="socialIcons">
-					<li class="newsletter">
-						<p>Sign up for our Newsletter</p>
-					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+				<?php if ( dynamic_sidebar( 'social-icons' ) ); ?>
 			</aside>
 
 			<div class="rightCol">
 
 				<header>
-					<?php if ( dynamic_sidebar( 'logo-full-width' ) ); ?>
+					<div class="logo">
+						<?php if ( dynamic_sidebar( 'logo-full-width' ) ); ?>
+					</div>
 				</header>
 
 				<section>
 					<div class="content">
-
-						<?php if ( dynamic_sidebar( 'single-width' ) ); ?>
+						<div class="page-content">
+							<?php if ( dynamic_sidebar( 'single-width' ) ); ?>
+						</div>
 					</div>
 				</section>
 
 				<section>
 					<div class="content">
-						<?php if ( dynamic_sidebar( 'single-width' ) ); ?>
+						<div class="page-content">
+							<?php if ( dynamic_sidebar( 'single-width' ) ); ?>
+						</div>
 					</div>
 				</section>
 

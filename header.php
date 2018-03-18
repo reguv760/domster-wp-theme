@@ -2,21 +2,11 @@
   <head>
     <meta charset="UTF-8">
     <title><?php wp_title('|', true, 'right') ?></title>
-    <!-- <link rel="stylesheet" href="css/basic.css"> -->
     <?php wp_head(); ?>
-    <!-- <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css"> -->
   </head>
 
   <body <?php body_class(); ?> >
     <div class="container">
-      <!-- <nav class="mobileNav">
-        <ul class="mobileNav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Photos</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </nav> -->
 
         <?php
           $defaults = array(
@@ -40,13 +30,6 @@
           wp_nav_menu( $defaults ); ?>
 
       <aside class="leftCol">
-        <!-- <nav>
-          <ul class="mainNav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </nav> -->
 
         <?php
           $defaults = array(

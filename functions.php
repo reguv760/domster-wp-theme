@@ -26,7 +26,7 @@ add_action('init', 'domsters_static_register_menu');
 
 /* enable js theme */
 // function theme_js() {
-//   wp_enqueue_script( 'global_js', get_template_directory_uri() . '/js/global.js', '', '', true );
+//   wp_enqueue_script( 'tourdates_js', get_template_directory_uri() . '/js/tourdates.js', '', '', true );
 // }
 // add_action( 'wp_enqueue_scripts', 'theme_js' );
 
@@ -49,5 +49,6 @@ function create_widget($name, $id, $description) {
 // don't use camelCase!
 create_widget( 'bandlogo', 'logo-full-width', ' Display Logo on all pages');
 create_widget( 'textarea', 'single-width', ' Text Area for Home');
+create_widget( 'socialicons', 'social-icons', ' HTML for social icons');
 
 show_admin_bar(false);

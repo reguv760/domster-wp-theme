@@ -4,7 +4,7 @@
       </div>
 
       <div class="mobileFooter">
-        <ul class="socialIcons">
+        <!-- <ul class="socialIcons">
           <li class="newsletter">
             <p>Sign up for our Newsletter</p>
           </li>
@@ -12,12 +12,13 @@
           <li></li>
           <li></li>
           <li></li>
-        </ul>
+        </ul> -->
+        <?php if ( dynamic_sidebar( 'social-icons' ) ); ?>
       </div>
     </div>
 
   </body>
 
  <!--  init js with this::: -->
-<?php wp_footer(); ?>
+<!-- <?php wp_footer(); ?> -->
 </html>
