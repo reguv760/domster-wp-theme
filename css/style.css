@@ -28,7 +28,7 @@ a:hover
 	color:#0f0f0f;
 }
 
-/*a.svg
+a.svg
 {
 	position:relative;
 	display:inline-block;
@@ -42,7 +42,7 @@ a.svg:after
 	right:0;
 	bottom:0;
 	left:0;
-}*/
+}
 
 img
 {
@@ -51,6 +51,25 @@ img
 	height:100%;
 }
 
+/* button class ::: used by newsletter */
+.button {
+	border:0;
+	background-color:#ec8;
+	padding: 0.5rem;
+	color: #0f0f0f;
+	font-size: 1.2rem;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.button:hover
+{
+	border-top-color: #eecc88;
+	background-color:#eee;
+}
+
+
+/* main container */
 .container
 {
 	display:grid;
@@ -170,13 +189,29 @@ img
 
 .container aside ul.socialIcons li
 {
+	display:flex;
+	justify-content: center;
+	align-items: center;
 	width:6rem;
 	height:6rem;
 	margin: 1rem;
 }
 
+.container aside ul.socialIcons li object
+{
+	width:5rem;
+	height:5rem;
+}
+
+.container aside ul.socialIcons li a:hover
+{
+	opacity:0.6;
+}
+
+
 .container aside ul.socialIcons li.newsletter
 {
+	min-height:2rem;
 	width:100%;
 }
 /* rightCol page */
@@ -257,6 +292,15 @@ img
 	width:100%;
 }
 
+.container .blog-post h3
+{
+	font-weight:400;
+	font-size:2rem;
+	padding:0 1rem;
+	color:#333;
+	width:100%;
+}
+
 .container .page-content p,
 .container .blog-post p
 {
@@ -288,7 +332,7 @@ img
 .container .mobileFooter
 {
 	display: none;
-	height:6rem;
+	height:8rem;
 	width:100%;
 	background-color:#0f0f0f;
 	position:fixed;
@@ -304,27 +348,47 @@ img
 	display:flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
-	align-items: center;
 	list-style-type: none;
 }
 
 .container .mobileFooter ul.socialIcons li
 {
-	width:6rem;
-	height:6rem;
-	background-color:#9999cc;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:8rem;
+	height:8rem;
 }
 
+.container .mobileFooter ul.socialIcons li a
+{
+	text-decoration: none;
+}
+
+.container .mobileFooter ul.socialIcons li a:hover
+{
+	opacity:0.6;
+}
 .container .mobileFooter ul.socialIcons li object
 {
-	width:100%;
-	height:auto;
+	width:5rem;
+	height:5rem;
+	margin:0 auto;
 }
 
 .container .mobileFooter ul.socialIcons li.newsletter
 {
 	width:18rem;
+	padding:0;
 	align-self:flex-start;
+}
+
+.container aside ul.socialIcons li.newsletter .button,
+.container .mobileFooter ul.socialIcons li.newsletter .button
+{
+	cursor:pointer;
+	margin:0.5rem 0;
+	align-self: flex-end;
 }
 
 .container .widget
@@ -336,7 +400,7 @@ img
 {
 	.container
 	{
-		grid-template-rows: 6rem 1fr 6rem; /* 6rem = height of mobileNav + mobileFooter */
+		grid-template-rows: 6rem 1fr 8rem; /* 6rem = height of mobileNav + mobileFooter */
 		grid-template-areas:
 	 	"mobileNav 		mobileNav 		mobileNav"
 	 	 "rightCol 		rightCol 		rightCol"
