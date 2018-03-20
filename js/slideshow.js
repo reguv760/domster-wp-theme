@@ -67,7 +67,7 @@ function prepareSlideshow() {
   imageSlideshow.setAttribute("src","./wp-content/themes/domster-rg/img/slideshow.gif");
   imageSlideshow.setAttribute("alt","a glimpse of what awaits you");
 
-  imageSlideshow.setAttribute("id","image-slideshow");
+  //imageSlideshow.setAttribute("id","image-slideshow");
   imageSlideshow.setAttribute("class","image-slideshow");
   slideshow.appendChild(imageSlideshow);
   insertAfter(slideshow,slideshowContainer);
@@ -93,8 +93,8 @@ function prepareSlideshow() {
       // if (destination.indexOf("contact.html") != -1) {
       //   moveElement("preview",-600,0,5);
       // }
-    }
-  }
+   // }
+  //}
 }
 
 addLoadEvent(prepareSlideshow);
