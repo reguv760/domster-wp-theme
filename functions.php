@@ -25,10 +25,11 @@ function domsters_static_register_menu() {
 add_action('init', 'domsters_static_register_menu');
 
 /* enable js theme */
-// function theme_js() {
-//   wp_enqueue_script( 'tourdates_js', get_template_directory_uri() . '/js/tourdates.js', '', '', true );
-// }
-// add_action( 'wp_enqueue_scripts', 'theme_js' );
+function theme_js() {
+  wp_enqueue_script( 'tourdates_js', get_template_directory_uri() . '/js/tourdates.js', '', '', true );
+  wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/slideshow.js', '', '', true );
+}
+add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 
 
