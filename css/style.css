@@ -219,6 +219,7 @@ img
 {
 	display:block;
 	grid-area:rightCol;
+	margin:0 1rem;
 }
 
 
@@ -245,7 +246,6 @@ img
 .container .rightCol section
 {
 	display:block;
-	padding:2rem;
 	min-height:100vh;
 	background-color:#334;
 }
@@ -273,10 +273,11 @@ img
 .container .page-content,
 .container .blog-post
 {
+	display: block;
 	background-color: #f3f3f3;
 	width: 90%;
 	margin: 0 auto 2rem auto;
-	padding: 1rem;
+	padding: 2rem;
 	min-height: 15rem;
 	border-radius: 0.5rem;
 	filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
@@ -287,18 +288,17 @@ img
 {
 	font-weight: 700;
 	font-size:3rem;
-	padding:0 1rem;
+	margin:1rem;
 	color:#666;
 	width:100%;
 }
 
-.container .blog-post h3
+.container .blog-post h5
 {
 	font-weight:400;
-	font-size:2rem;
-	padding:0 1rem;
+	font-size:1.8rem;
 	color:#333;
-	width:100%;
+	margin:0 1rem;
 }
 
 .container .page-content p,
@@ -339,7 +339,6 @@ img
 	bottom:0;
 	grid-area:mobileFooter;
 	z-index: 900;
-
 	padding:0;
 }
 

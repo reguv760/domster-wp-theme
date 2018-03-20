@@ -16,7 +16,7 @@
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<div class="blog-post">
 							<h2><?php the_title(); ?></h2>
-	            <h3><?php the_date(get_option('date_format')); ?></h3>
+	            <h5><?php the_date(get_option('date_format')); ?></h5>
 					    <?php the_content(); ?>
 
 					   </div>
