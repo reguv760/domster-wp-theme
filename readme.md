@@ -17,3 +17,6 @@ socialicons - used by Sidebar Navigation + Mobile Navigation
 Home - uses two sections
 Blog - uses one section
 Galery - uses one section + flexbox for dynamic height
+
+:: Additional Plugins ::
+safe-svg - embed .svg files as <object>
